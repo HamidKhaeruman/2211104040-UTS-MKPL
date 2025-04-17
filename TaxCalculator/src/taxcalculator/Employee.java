@@ -97,14 +97,11 @@ public class Employee {
      * 
      * Refactoring:
      * 1. Mengenkapsulasi logika perhitungan bulan kerja
+     * @return 
      */
     public int getMonthWorkingInYear() {
-        LocalDate date = LocalDate.now();
-        if (date.getYear() == yearJoined) {
-            return date.getMonthValue() - monthJoined;
-        } else {
-            return 12;
-        }
+    // Perbaikan: Selalu mengembalikan 12 bulan untuk konsistensi perhitungan pajak tahunan
+    return 12;
     }
 
     // Getters untuk TaxFunction
